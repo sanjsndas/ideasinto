@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Ideas Into Architecture</title>
+    <meta name="description" content="About Ideas Into Architecture — an independent publication exploring interior design, architecture, and the decisions that shape how we live.">
+    <link rel="canonical" href="https://www.ideasintoarchitecture.com/about.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About · Ideas Into Architecture">
+    <meta property="og:description" content="About Ideas Into Architecture — an independent publication exploring interior design, architecture, and the decisions that shape how we live.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ideasintoarchitecture.com/about.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=630&fit=crop">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Ideas Into Architecture",
+      "url": "https://www.ideasintoarchitecture.com/about.html",
+      "description": "About Ideas Into Architecture — an independent publication exploring interior design, architecture, and the decisions that shape how we live.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Ideas Into Architecture",
+        "founder": "Elena Marchetti",
+        "foundingDate": "2016"
+      }
+    }
+    </script>
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f7;
+            color: #1e1e1e;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ---------- TYPOGRAPHY ---------- */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.25rem;
+            font-size: 1.0625rem;
+            color: #2c2c2c;
+        }
+
+        .article-body h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- LAYOUT ---------- */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- HEADER ---------- */
+        .site-header {
+            border-bottom: 1px solid #e2dfda;
+            background: #faf9f7;
+            padding: 20px 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(6px);
+            background: rgba(250, 249, 247, 0.92);
+        }
+
+        .header-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-bottom: 16px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #1e1e1e;
+        }
+
+        .logo span {
+            font-weight: 300;
+            font-style: italic;
+            color: #8b7e6e;
+        }
+
+        .header-tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #7a6e5f;
+            font-weight: 400;
+        }
+
+        .main-nav {
+            border-top: 1px solid #e2dfda;
+            padding: 12px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .main-nav a {
+            color: #3d3a35;
+            font-weight: 450;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            border-bottom-color: #b3a18e;
+            color: #1e1e1e;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            gap: 8px;
+        }
+
+        .search-bar input {
+            padding: 6px 12px;
+            border: 1px solid #d6d0c8;
+            background: #fff;
+            font-size: 0.85rem;
+            border-radius: 20px;
+            width: 200px;
+            font-family: inherit;
+        }
+
+        .search-bar input:focus {
+            outline: 1px solid #b3a18e;
+            border-color: #b3a18e;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #6b6258;
+            padding: 4px 6px;
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .search-bar {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 8px;
+            }
+            .search-bar input {
+                width: 100%;
+            }
+            .main-nav {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 8px;
+                gap: 16px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* ---------- ABOUT PAGE CONTENT ---------- */
+        .about-hero {
+            margin: 48px 0 32px;
+        }
+
+        .about-hero h1 {
+            max-width: 900px;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .about-hero .lead {
+            font-size: 1.25rem;
+            color: #4f4a44;
+            max-width: 750px;
+            line-height: 1.7;
+            font-weight: 350;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 48px 0 56px;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1.0625rem;
+            color: #2c2c2c;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-text h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 16px;
+        }
+
+        .about-text h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            margin: 28px 0 12px;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 120px;
+        }
+
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #edeae5;
+        }
+
+        .about-image figcaption {
+            font-size: 0.8rem;
+            color: #8b837a;
+            margin-top: 12px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0 40px;
+        }
+
+        .value-item {
+            border-top: 2px solid #b3a18e;
+            padding-top: 20px;
+        }
+
+        .value-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 550;
+            margin-bottom: 8px;
+        }
+
+        .value-item p {
+            font-size: 0.95rem;
+            color: #4f4a44;
+            margin: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0 48px;
+        }
+
+        .team-member {
+            text-align: left;
+        }
+
+        .team-member img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #edeae5;
+            margin-bottom: 16px;
+        }
+
+        .team-member h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 550;
+            margin-bottom: 4px;
+        }
+
+        .team-member .role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8b7e6e;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .team-member p {
+            font-size: 0.92rem;
+            color: #4f4a44;
+            margin: 0;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 40px 0 56px;
+            padding: 40px 0;
+            border-top: 1px solid #e2dfda;
+            border-bottom: 1px solid #e2dfda;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #1e1e1e;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #8b837a;
+            margin-top: 4px;
+        }
+
+        .pull-quote {
+            border-left: 3px solid #b3a18e;
+            padding: 8px 0 8px 28px;
+            margin: 36px 0;
+        }
+
+        .pull-quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            color: #2c2c2c;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .pull-quote cite {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-style: normal;
+            color: #8b7e6e;
+            margin-top: 12px;
+        }
+
+        /* ---------- NEWSLETTER (reuse) ---------- */
+        .newsletter-section {
+            background: #f2efe9;
+            padding: 48px 0;
+            margin: 56px 0;
+            border-radius: 4px;
+        }
+
+        .newsletter-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 24px;
+        }
+
+        .newsletter-inner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .newsletter-inner p {
+            color: #4f4a44;
+            margin-bottom: 24px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            padding: 12px 18px;
+            border: 1px solid #d6d0c8;
+            background: #fff;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            min-width: 260px;
+            font-family: inherit;
+        }
+
+        .newsletter-form button {
+            padding: 12px 28px;
+            background: #1e1e1e;
+            color: #faf9f7;
+            border: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        /* ---------- FOOTER (reuse) ---------- */
+        .site-footer {
+            border-top: 1px solid #ddd8d1;
+            padding: 48px 0 32px;
+            font-size: 0.85rem;
+            color: #4f4a44;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-grid h5 {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #3d3a35;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 8px;
+        }
+
+        .footer-grid a:hover {
+            color: #1e1e1e;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e2dfda;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: #7a6e5f;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .about-image {
+                position: static;
+                order: -1;
+            }
+            .about-image img {
+                aspect-ratio: 16 / 9;
+            }
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-hero .lead {
+                font-size: 1.1rem;
+            }
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            color: #8b7e6e;
+            margin: 40px 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div>
+                    <div class="logo">Ideas Into <span>Architecture</span></div>
+                </div>
+                <div class="header-tagline">Independent design journal · Est. 2016</div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+                    <button id="searchBtn" aria-label="Submit search">⌕</button>
+                </div>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <div class="container">
+
+            <!-- HERO -->
+            <div class="about-hero">
+                <h1>We believe good design is a form of quiet intelligence.</h1>
+                <p class="lead">Ideas Into Architecture is an independent publication for people who want to understand how spaces work — not just how they look. We write about interior design, architecture, materials, and the decisions that shape daily life.</p>
+            </div>
+
+            <!-- MAIN GRID: TEXT + IMAGE -->
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our story</h2>
+                    <p>Ideas Into Architecture began in 2016 as a personal notebook. Elena Marchetti, a former architect, was frustrated by the gap between professional design knowledge and the information available to homeowners and enthusiasts. Too much of what she read was either superficial or needlessly opaque.</p>
+                    <p>So she started writing. The first articles were practical guides — how to read a floor plan, how to evaluate a material, how to plan lighting that actually works. They found an audience. Soon, other writers and designers joined. The notebook became a publication.</p>
+                    <p>Today, Ideas Into Architecture reaches hundreds of thousands of readers each month. We remain independent, reader-supported, and committed to the same principle: design knowledge should be rigorous, accessible, and honest.</p>
+
+                    <div class="pull-quote">
+                        <p>“A well-designed room doesn't announce itself. It simply makes your life easier, quieter, and more pleasant.”</p>
+                        <cite>— Elena Marchetti, Founder</cite>
+                    </div>
+
+                    <h2>What we believe</h2>
+                    <p>We are not a trend blog. We are not a product catalogue. We are a publication for people who want to understand the why behind the what.</p>
+
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4>Clarity over complexity</h4>
+                            <p>Good design writing should be precise, not pretentious. We explain things clearly — no jargon for its own sake.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Practical over theoretical</h4>
+                            <p>We care about what you can actually use. Every article aims to leave you with a concrete insight or decision.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Depth over speed</h4>
+                            <p>We take time to research. We talk to makers, architects, and materials specialists. We don't chase algorithms.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Independence over influence</h4>
+                            <p>We are reader-supported. We don't accept sponsored content. Our only obligation is to our readers.</p>
+                        </div>
+                    </div>
+
+                    <h2>How we work</h2>
+                    <p>Every article is written by a human, edited by a human, and fact-checked before publication. We cite sources when appropriate. We acknowledge uncertainty when it exists. We correct errors promptly and transparently.</p>
+                    <p>Our editorial team includes architects, interior designers, and experienced journalists. We bring professional expertise to a general audience — without diluting the substance.</p>
+
+                    <h3>Our contributors</h3>
+                    <p>We work with a small group of regular contributors and guest writers. If you have expertise and a clear point of view, we'd like to hear from you. <a href="contact.html" style="text-decoration: underline;">Get in touch</a>.</p>
+                </div>
+
+                <!-- SIDEBAR IMAGE (sticky on desktop) -->
+                <figure class="about-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1000&fit=crop" alt="Sunlit design studio with books, drawings, and material samples">
+                    <figcaption>Our studio: where ideas become architecture.</figcaption>
+                </figure>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">2016</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Articles published</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">280k</div>
+                    <div class="stat-label">Monthly readers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Independent</div>
+                </div>
+            </div>
+
+            <!-- TEAM -->
+            <div class="section-label">Editorial team</div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" alt="Portrait of Elena Marchetti, Founder and Editor">
+                    <h4>Elena Marchetti</h4>
+                    <div class="role">Founder & Editor</div>
+                    <p>Former architect. Elena writes about interior design, materials, and the intersection of craft and daily life.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Portrait of James Okafor, Architecture Editor">
+                    <h4>James Okafor</h4>
+                    <div class="role">Architecture Editor</div>
+                    <p>James covers residential architecture, urbanism, and the structural decisions that shape how buildings age.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face" alt="Portrait of Priya Nair, Materials & Interiors Writer">
+                    <h4>Priya Nair</h4>
+                    <div class="role">Materials & Interiors</div>
+                    <p>Priya writes about stone, timber, finishes, and the practical realities of choosing materials that last.</p>
+                </div>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="newsletter-section">
+                <div class="newsletter-inner">
+                    <h3>The Design Dispatch</h3>
+                    <p>One thoughtful email each week. Articles, practical guides, and the occasional material discovery.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="font-size: 1.4rem; margin-bottom: 12px;">Ideas Into <span>Architecture</span></div>
+                    <p style="max-width: 300px; font-size: 0.85rem;">An independent publication about interior design, architecture, and the decisions that shape how we live.</p>
+                </div>
+                <div>
+                    <h5>Categories</h5>
+                    <ul>
+                        <li><a href="index.html">Interior Design</a></li>
+                        <li><a href="index.html">Architecture</a></li>
+                        <li><a href="index.html">Home Design</a></li>
+                        <li><a href="index.html">Materials</a></li>
+                        <li><a href="index.html">Space Planning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Follow</h5>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Ideas Into Architecture. All rights reserved.</span>
+                <span>Made with care for people who read.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        (function() {
+            // Newsletter form (prevent default)
+            document.getElementById('newsletterForm').addEventListener('submit', e => {
+                e.preventDefault();
+                alert('Thank you for subscribing to The Design Dispatch.');
+                e.target.reset();
+            });
+
+            // Search placeholder (non-functional on about page, but keeps UI consistent)
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            if (searchBtn) {
+                searchBtn.addEventListener('click', () => {
+                    const term = searchInput.value.trim();
+                    if (term) {
+                        window.location.href = 'index.html?search=' + encodeURIComponent(term);
+                    }
+                });
+            }
+            if (searchInput) {
+                searchInput.addEventListener('keyup', e => {
+                    if (e.key === 'Enter') {
+                        const term = searchInput.value.trim();
+                        if (term) {
+                            window.location.href = 'index.html?search=' + encodeURIComponent(term);
+                        }
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
